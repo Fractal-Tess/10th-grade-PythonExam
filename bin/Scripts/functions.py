@@ -3,7 +3,7 @@ import os.path
 from os import path
 
 
-def ask_for_yes_and_no(message):
+def ask_user(message):
     f = input(message)
     if f.lower() == "y":
         return True
@@ -11,7 +11,7 @@ def ask_for_yes_and_no(message):
         return False
     else:
         print("Please enter a valid input.")
-        return ask_for_yes_and_no(message)
+        return ask_user(message)
 
 
 def generate_ticket_index():

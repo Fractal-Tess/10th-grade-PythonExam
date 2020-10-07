@@ -1,40 +1,39 @@
-import os, functions, sys, classes
+try:
+    import os
+    import sys
+    import classes
+    from os import path
 
+except Exception as e1:
+    print("Some modules are missing:[{}]".format(e1))
 
 original_dir = os.getcwd()
-train_list = []
+
+train_file_location = os.getcwd() + "/bin/Trains_Data_base"
+train_file_name = "trains.json"
+
+train_object_list = []
+list_of_all_stations = []
 
 
 def check_train_data_base():
-    os.chdir(original_dir + "/bin")
-    if not os.path.exists("Trains_Data_base"):
-        print("Train_Data_Base' Directory couldn't be found!")
-        if functions.ask_for_yes_and_no("Should the program rebuild directory :y/n :"):
-            os.mkdir("Trains_Data_base")
-                #TODO: add generator functionality
-                #generator()
-        else:
-            print("System terminating")
-            sys.exit(0)
-
-    os.chdir(original_dir + "/bin/Trains_Data_Base")
-    print("Found " + str(len(os.listdir(os.getcwd()))) + " train configuration file(s).")
-    os.chdir(original_dir)
-    return None
-
+    try:
+        os.chdir(train_file_location)
+    except Exception as e2:
+        print("Pathfinding error: {}".format(e2))
+        sys.exit(0)
+    if not path.exists(train_file_name):
+        print("{} at directory'{}' could not be found.".format(train_file_name, train_file_location))
+        sys.exit(0)
 
 def generator():
-    pass
+    pass  # TODO : add train generator method()
 
 
 def load_trains():
-    os.chdir(original_dir + "/bin/Trains_Data_Base")
-    for n in range(0, len(os.listdir(os.getcwd()))):
-        with open(os.listdir(os.getcwd())[n], "r") as f:
-            global train_list
-            try:
-                train_list.append(classes.Train(*map(str.strip, f.readlines()[:9])))
-            except TypeError:
-                print("Train configuration file '" + os.listdir(os.getcwd())[n] + "' is corrupted.")
-        os.chdir(original_dir)
-    os.chdir(original_dir)
+    global train_object_list
+
+    with open("trains.json", "r") as f:
+        pass
+
+

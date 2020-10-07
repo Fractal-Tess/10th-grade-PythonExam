@@ -1,32 +1,29 @@
 import sys
-import ticket
-import classes, train_manager
+import os
+from ticket import new_ticket
 
 
 def m_menu():
-    #Todo : reduce print function
-    print("_____________________________________________")
-    print("For: New ticket :TYPE 'N'")
-    print("For: Check existing ticket :TYPE 'C'")
-    print("For: Train Graphic :TYPE 'T'")
-    print("For: Day statistics :TYPE 'D'")
-    print("For: Quit application :Type 'Q'")
-    print("____________________________________________")
-    user_input = input("Input :")
+    user_input = input("_" * 35 + "\n" +
+"""For: New ticket :TYPE 'N'
+For: Ticket check :TYPE 'C'
+For: Train Graphic :TYPE 'T'
+For: Day statistics :TYPE 'D'
+For: Quit application :Type 'Q'
+Input :""").lower()
 
-    if user_input.lower() == "n":
-        ticket.new_ticket()
-    elif user_input.lower() == "c":
+    if user_input == "n":
+        new_ticket()
+    elif user_input == "c":
         pass
-        #TODO: read ticket files and check for authenticity
-    elif user_input.lower() == "t":
-        #TODO: function that returns a list/dict with all currect active trains and their origin, destination,
-        # current location, destination + route
+        # TODO: read ticket files and check for authenticity
+    elif user_input == "t":
+        # TODO:Depending on time, print all trains && their current position
         pass
-    elif user_input.lower() == "d":
-        #TODO: ....
+    elif user_input == "d":
+        # TODO:Read all tickets purchased for X day and print some statistics
         pass
-    elif user_input.lower() == "q":
+    elif user_input == "q":
         sys.exit(0)
     else:
         print("Please enter a valid input!")

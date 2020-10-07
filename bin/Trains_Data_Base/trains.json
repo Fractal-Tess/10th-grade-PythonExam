@@ -1,0 +1,41 @@
+{
+  "Trains": [
+    {
+      "Route": "Kalotina Zapad, Kalotina, Dragoman, Aldomirovci, Slivnica, Petrich, Kostinbrod, Voluyak, Sofiq, Iskur, Kazichene, Elin Pelin, Vakarel, Verinsko, Ixtiman, Kostenec, Belovo, Septemwri, Pazardzhik, Ognyanovo, Stamboliyski, Todor Kableshkov, Plovdiv, Krymovo, Katunicam, Popovica, Purvomai, Karadjalovo, Yabulkovo, Dimitrov Grad, Nova Nadejda, Simeonov Grad, Harmanli, Lubimec, Svilengrad",
+      "Arrives": "d",
+      "Traid_ID": 1
+    },
+    {
+      "Route": "Sofiq, Sofiq-Sever, Iliyanci, Kurilo, Rebrovo, Svoge, Bov, Lakatnik, RP Levishte, Eliseina, Zverino, Mezdra-yug, Mezdra, Roman, Kunino, Cheren Brqg, Telish, Gorni Dubnik, Dolni Dubnig, Yasen, Pleven-Zapad, Pleven, Pordim, Levski, Butovo, Pawlikeni, Rp Lesicherni, Resen, Polikraishte, Gorna Orqhovica, Djulinica, Strandja, Slawinowo, Popovo, Dralfa, Tyrgovishte, RP Nadarevo, Han Krum, Shumen, Mytnica, Kaspichan, Prowdiq, Sindel, Razdelna, Povelqnowo, Beloslav, Ezerovo, Topolite, RP Varna-Zapad, Varna",
+      "Traid_ID": 2
+    },
+    {
+      "Route": "Iliqnci, Svetovrachene, Kremikovci, Yiana, Musachevo, Stolnik, Saranci, Makocevo, Dolno Kamarci, Mirkovo, Zlatica, Pirdop, Anton, Koprivshtica, Strqma, Klisura, Hristo Danovo, Ignovo, Sopot, Karlovo, Botev, Kalofer, Tuja, Sahrane, Dunavci, Kazanluk, Cherganovo, Tulovo, Dobovo, Nikolaevo, Gurkovo, Tvurdinca, Shivachevo, Chumerna, Gavrailovo, Chintulovo, Sliven, Jeilio Voivoda, Zimnica, Straldja, Cerkovski, Karnobat, Lazerovo, Podvis, Vedrovo, Zavet, Lialykovo, Duskotna, Turnak, Rp Struia, Asparuhovo, Komunari, Dulgopol, Velichkovo, Ionak, Sindel, Varna Feribotna",
+      "Traid_ID": 3
+    },
+    {
+      "Route": "Ruse, Dorostol, Dolapite, Ivanovo, Dve mogili, Borovo, Morunitsa, ByalaPolski, Trumbesh, Petko Karavelovo, Yantra, Akatsiya, Gorna Oryakhovitsa, Veliko Turnovo, Samovodene, Debelets, RP Sokolovo, Dryanovo, Tsareva livada, Tryavna, Plachkovtsi, Krustets, Raduntsi, Dubovo, Tulovo, Zmeyovo, Mikaylovo, Merichleri, Dimitrovgrad-sever, Dimitrovgrad, Haskovo, Knizhovnik, Most, Kurdzjali, Momchilgrad, Podkova",
+      "Train_ID": 4
+    },
+    {
+      "Route": "Sofiq, Zaharna, Fabrika, Gorna Banq, Vladaq, Dragichevo, Pernik, Krakra, Batanovci, Radomir, Dolni Rakovec, Gulubnik, Delqn, Dqkovo, Dupnica, Boboshevo, Kocherinovo, Blagoevgrad, Simitli, Cherniche, Peyo Yavorov, Kresna, Strumqni, Sandanski, Damyanica, Gen. Todorov, Kulata",
+      "Traid_ID": 5
+    },
+    {
+      "Route": "Valuyak, Hrabursko, Razmenna, Batanovci, Radomir, Dimitrov, Zemen, Ryjdavica, Kopilovci, Kqstendil, Giueshevo",
+      "Traid_ID": 6
+    },
+    {
+      "Route": "Mezdra, Ruska Bqla, Vraca, Beli Izvor, Krivodol, Rakevo, Boichinovci, Murchevo, Medkovec, Brusarci, Drenovec, Vodnqnci, Oreshec, Dimovo, Sracimir, Vidbol, Vidin",
+      "Traid_ID": 7
+    },
+    {
+      "Route": "Plovdiv, Filipovo, Trakiya, Skutape, Manole, Belozem, Orizovo, Cherna Gora, Chirpan, Svoboda, Mihailovo, Kaloyanovec, Stara Zagora, Kalitinovo, Han Asparuh, Nova Zagora, Konyovo, Kermen, Bezmer, Qmbol, Zavoi, Zimnica, Straldja, Cerkovski, Chernograd, Aitos, Bulgarovo, Drujba, Dolno Ezerovo, RP Lozovo, Vladimir, Pavlov, Burgas",
+      "Traid_ID": 8
+    },
+    {
+      "Route": "Ruse, Obrazcov, Chiflik, Yastrebovo, Vetovo, Senovo, Prostorno, Razgrad, Samuil, Visoka Polqna, Hitrino, Pliska, Kaspichan",
+      "Traid_ID": 9
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-import time, main_menu, functions, classes, train_manager, station_manager
+import time, main_menu, functions, classes, train_manager
 
 try_again = "Do you want to try again? y/n :"
 breaker = "______________________________"
@@ -21,7 +21,7 @@ def new_ticket():
     trip_time = date_and_hour()
 
     print(breaker + "\nChose a train ~ ")
-    for train in train_manager.train_list:
+    for train in train_manager.train_object_list:
         if classes.Train.check_route(train, ticket_starting_station, ticket_end_station, trip_time):
             candidate_trains.append(train)
 
@@ -82,7 +82,7 @@ def ticket_amount():
         user_input = int(user_input)
     except ValueError:
         print("Input was incorrect")
-        if functions.ask_for_yes_and_no(try_again):
+        if functions.ask_user(try_again):
             return ticket_amount()
         else:
             main_menu.m_menu()
@@ -90,34 +90,34 @@ def ticket_amount():
 
 
 def ss_f():
-    for station in station_manager.station_list:
+    for station in station_manager.list_of_all_stations:
         print(station)
     user_input = input("Pick a starting station :").lower()
     user_input = user_input.capitalize()
-    if user_input in station_manager.station_list:
+    if user_input in station_manager.list_of_all_stations:
         return user_input
     print("Invalid input")
-    if functions.ask_for_yes_and_no(try_again):
+    if functions.ask_user(try_again):
         return ss_f()
     else:
         main_menu.m_menu()
 
 
 def es_f(ss):
-    for station in station_manager.station_list:
+    for station in station_manager.list_of_all_stations:
         print(station)
     user_input = input("Pick a destination :").lower()
     user_input = user_input.capitalize()
     if user_input == ss:
         print("Starting station and Ending station CANNOT be the same!")
-        if functions.ask_for_yes_and_no(try_again):
+        if functions.ask_user(try_again):
             return es_f(ss)
         else:
             main_menu.m_menu()
-    if user_input in station_manager.station_list:
+    if user_input in station_manager.list_of_all_stations:
         return user_input
     print("Please spell the station correctly!")
-    if functions.ask_for_yes_and_no(try_again):
+    if functions.ask_user(try_again):
         return es_f(ss)
     else:
         main_menu.m_menu()
@@ -127,7 +127,7 @@ def date_and_hour():
     trip_time = input("Time of the trip? :")
     if (len(trip_time)) > 5:
         print("Input was incorrect\n Too many characters.")
-        if functions.ask_for_yes_and_no(try_again):
+        if functions.ask_user(try_again):
             print("Input example  Day:Hour\n Input example  07:20")
             return date_and_hour()
         else:
@@ -135,7 +135,7 @@ def date_and_hour():
 
     if ":" not in trip_time:
         print("Please separate the numbers with a ':'")
-        if functions.ask_for_yes_and_no(try_again):
+        if functions.ask_user(try_again):
             return date_and_hour()
         else:
             main_menu.m_menu()
@@ -145,7 +145,7 @@ def date_and_hour():
             trip_time = [int(x) for x in trip_time]
         except ValueError:
             print("Input must be 2 numbers separated by a ':'")
-            if functions.ask_for_yes_and_no(try_again):
+            if functions.ask_user(try_again):
                 return date_and_hour()
             else:
                 main_menu.m_menu()
