@@ -1,4 +1,4 @@
-class Train:
+lass Train:
     def __init__(self, route):
         self.route = route.split(", ")
        # self.route_timing_v = [[int(n) for n in element.split(":")] for element in route_timings_v.split(", ")]
