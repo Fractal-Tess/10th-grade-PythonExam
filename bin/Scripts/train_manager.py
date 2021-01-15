@@ -9,10 +9,14 @@ except Exception as err:
     sys.exit(0)
 
 train_load = {}
+
+
 def load_trains():
     print(os.getcwd())
     with open("trains.json") as jf:
         data = json.load(jf)
 
         print(data)
+
+
 load_trains()

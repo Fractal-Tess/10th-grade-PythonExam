@@ -1,5 +1,5 @@
-import random
 import os.path
+import random
 from os import path
 
 
@@ -15,7 +15,6 @@ def ask_user(message):
 
 
 def generate_ticket_index():
-
     random_number = str(random.randrange(100000000, 999999999))
     original_dir = os.getcwd()
     os.chdir(str(os.getcwd()) + "/bin")
@@ -32,4 +31,3 @@ def generate_ticket_index():
         f.writelines("ID = " + random_number + "\n")
         os.chdir(original_dir)
         return f
-

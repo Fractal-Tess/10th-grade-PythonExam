@@ -1,11 +1,13 @@
-import time, main_menu, functions, classes, train_manager
+import classes
+import functions
+import main_menu
+import train_manager
 
 try_again = "Do you want to try again? y/n :"
 breaker = "______________________________"
 
 
 def new_ticket():
-
     candidate_trains = []
 
     # 1 starting station
@@ -52,13 +54,13 @@ def new_ticket():
 
     ammount_of_tickets = ticket_amount()
 
-
     #
     # TODO:dd
     # load possible choices
     # check for date and hour
     #
     # check for seats for given trip (ticket_amount)
+
 
 def chosen_train(candidate_trains):
     user_input = input("Chose a train ~:")

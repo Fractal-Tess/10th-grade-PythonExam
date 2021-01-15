@@ -1,16 +1,16 @@
 import sys
-import os
+
 from ticket import new_ticket
 
 
 def m_menu():
     user_input = input("_" * 35 + "\n" +
-"""For: New ticket :TYPE 'N'
-For: Ticket check :TYPE 'C'
-For: Train Graphic :TYPE 'T'
-For: Day statistics :TYPE 'D'
-For: Quit application :Type 'Q'
-Input :""").lower()
+                       """For: New ticket :TYPE 'N'
+                       For: Ticket check :TYPE 'C'
+                       For: Train Graphic :TYPE 'T'
+                       For: Day statistics :TYPE 'D'
+                       For: Quit application :Type 'Q'
+                       Input :""").lower()
 
     if user_input == "n":
         new_ticket()
