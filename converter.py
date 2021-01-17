@@ -26,18 +26,19 @@
 #
 #     with open(f"bin/train_schedule/{file}", "r") as f:
 #         li.append(json.load(f))
-#
-# s = set(li)
+
 from collections import Counter
 import json
 import os
 all_routes = list()
 for file in os.listdir("bin/train_schedule/"):
     with open(f"bin/train_schedule/{file}", "r") as f:
-        all_routes.append(json.load(f)[0])
+        contents = json.load(f)
+        all_routes.append(contents[0])
 count = Counter([tuple(x) for x in all_routes])
 print(count)
-count.
+
+
 # with open("bin/train_schedule/route1.json") as f:
 #     original = ['ВИДИН', 'ВИДБОЛ', 'ЖЕГЛИЦА', 'СРАЦИМИР', 'ДИМОВО', 'БЕЛЩИЦА', 'ОРЕШЕЦ', 'ВОДНЯНЦИ', 'ДРЕНОВЕЦ', 'ДЪБОВА МАХАЛА', 'БРУСАРЦИ', 'МЕДКОВЕЦ', 'ДОЛНО ЦЕРОВЕНЕ', 'ГАБРОВНИЦА', 'МЪРЧЕВО', 'БОЙЧИНОВЦИ', 'РАКЕВО', 'КРИВОДОЛ', 'БЕЛИ ИЗВОР', 'ВРАЦА', 'МЕЗДРА ЮГ', 'ЗВЕРИНО', 'ЛАКАТНИК', 'СВОГЕ', 'СОФИЯ СЕВЕР', 'СОФИЯ']
 #     li = json.load(f)[0]
